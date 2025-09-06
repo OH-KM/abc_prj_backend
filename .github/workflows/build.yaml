@@ -40,7 +40,7 @@ jobs:
           context: .
           push: true
           tags: |
-            833558168913.dkr.ecr.ap-northeast-2.amazonaws.com/abc_prj_backend:${{ github.event.inputs.image_tag }}
+            ${{ secrets.ECR_BACKEND_REPOSITORY }}:${{ github.event.inputs.image_tag }}
           provenance: false
           sbom: false
           no-cache: true
